@@ -4061,13 +4061,14 @@ header {
   display: flex;
   flex-direction: column;
   width: 100vw;
-  padding: 2rem;
+  padding: 2rem 1.5rem;
   font-size: 1.5rem;
 }
 
 .title {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .title__head {
@@ -4075,8 +4076,11 @@ header {
 }
 
 .menuBtn {
-  background-color: red;
-  font-size: 5rem;
+  width: 20px;
+  aspect-ratio: 1/1;
+  margin: 0;
+  padding: 0;
+  fill: #F9F871;
 }
 
 nav {
