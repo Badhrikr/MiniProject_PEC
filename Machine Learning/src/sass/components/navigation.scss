@@ -1,0 +1,49 @@
+header{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    padding: 2rem;
+    font-size: 1.5rem;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+}
+
+.title__head{
+    font-size: 2rem;
+}
+
+.menuBtn{
+    background-color: red;
+    font-size: 5rem;
+}
+
+nav{
+    display: none;
+}
+
+.show-links{
+    display: block;
+}
+
+nav  ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+}
+
+nav li{
+    margin: 0;
+    padding: 0;
+}
+
+nav a{
+    color: #f9f871;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
