@@ -10,3 +10,13 @@ p {
 .description div {
   margin-bottom: 3em;
 }
+
+@media screen and (min-width: 1200px) {
+  .description {
+    width: 60%;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+}
