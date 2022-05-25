@@ -1,0 +1,12 @@
+p {
+  font-size: 1.4rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.description {
+  padding: 2.5em;
+}
+
+.description div {
+  margin-bottom: 3em;
+}
