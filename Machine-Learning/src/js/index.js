@@ -1,13 +1,6 @@
 let slideIndex = 1;
 showSlides(slideIndex);
 
-let menuBtn = document.querySelector(".menuBtn")
-let navBar = document.querySelector(".nav__container")
-
-menuBtn.addEventListener('click',function(){
-  navBar.classList.toggle("show-links")
-})
-
 // Next/previous controls
 function plusSlides(n) {
   showSlides(slideIndex += n);
@@ -34,4 +27,10 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
+let menuBtn = document.querySelector(".menuBtn")
+let navBar = document.querySelector(".nav__container")
+
+menuBtn.addEventListener('click',function(){
+  navBar.classList.toggle("show-links")
+})
 
