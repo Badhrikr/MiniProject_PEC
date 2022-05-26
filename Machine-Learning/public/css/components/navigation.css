@@ -1,7 +1,7 @@
 header {
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  width: 100%;
   padding: 2rem 1.5rem;
   font-size: 1.5rem;
 }
@@ -63,6 +63,10 @@ nav a {
     font-size: 3rem;
   }
 
+  nav {
+    display: block;
+  }
+
   nav ul {
     flex-direction: row;
   }
@@ -91,9 +95,5 @@ nav a {
 
   .menuBtn {
     display: none;
-  }
-
-  .show-links {
-    display: block;
   }
 }

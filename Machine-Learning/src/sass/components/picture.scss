@@ -1,0 +1,25 @@
+.card{
+    display: grid;
+    place-items: center;
+    gap: 4em;
+    grid-template-columns: repeat(2,1fr);
+
+    &__holder{
+        position: relative;
+    }
+
+    &__description{
+        display: none;
+        position: absolute;
+        inset: 0;
+        padding: 2em;
+    }
+
+    &__holder:nth-child(1):hover > &__description{
+        display: block;
+    }
+
+    &__holder:nth-child(1):hover{
+        filter: blur(1rem);
+    }
+}
