@@ -4081,6 +4081,7 @@ header {
   margin: 0;
   padding: 0;
   fill: #F9F871;
+  cursor: pointer;
 }
 
 nav {
@@ -4237,6 +4238,43 @@ p {
   transform: translateY(0);
 }
 
+main.symptoms__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 2em;
+}
+
+.symptoms {
+  width: 100%;
+  border: 2px solid #F9F871;
+  padding: 2em;
+}
+
+.symptoms form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.symptoms form button {
+  font-size: 2rem;
+}
+
+.symptoms__option {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 2em;
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 775px) {
+  .symptoms {
+    width: 40%;
+  }
+}
 body {
   display: block;
   overflow: visible;

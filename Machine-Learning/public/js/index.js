@@ -34,3 +34,7 @@ menuBtn.addEventListener('click',function(){
   navBar.classList.toggle("show-links")
 })
 
+// function changeIcon(){
+//   menuBtn.classList.toggle("fas fa-xmark")
+//   console.log("hello")
+// }
