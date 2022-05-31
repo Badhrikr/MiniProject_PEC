@@ -3,12 +3,37 @@ p {
   font-family: "Poppins", sans-serif;
 }
 
+.intro__title {
+  color: #D5A419;
+}
+
 .description {
   padding: 2.5em;
 }
 
 .description div {
   margin-bottom: 3em;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5em;
+}
+
+.info__button {
+  padding: 0.5em 1em;
+  color: #F9F871;
+  font-size: 2rem;
+  border: 2px solid #F9F871;
+  border-radius: 1rem;
+  text-decoration: none;
+  transition: box-shadow 250ms ease-in-out;
+}
+
+.info__button:hover {
+  box-shadow: 0 0 10px #F9F871;
 }
 
 @media screen and (min-width: 1200px) {
