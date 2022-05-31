@@ -10,6 +10,7 @@ main.symptoms__container{
     width: 100%;
     border: 2px solid #F9F871;
     padding: 2em;
+    border-radius: 1rem;
 }
 
 .symptoms form{
@@ -19,7 +20,17 @@ main.symptoms__container{
 }
 
 .symptoms form button{
+    padding: .2em .7em;
     font-size: 2rem;
+    border-radius: 1rem;
+    color: #F9F871;
+    border: 2px solid #F9F871;
+    background-color: transparent;
+    transition: box-shadow 350ms ease-in-out;
+}
+
+.symptoms form button:hover{
+    box-shadow: 0 0 10px #F9F871;
 }
 
 .symptoms__option{
@@ -37,5 +48,6 @@ main.symptoms__container{
 @media screen and (min-width: 775px) {
     .symptoms{
         width: 40%;
+        min-width: 600px;
     }
 }
