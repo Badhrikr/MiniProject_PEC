@@ -1,9 +1,13 @@
 @use 'reset';
 @use 'animations';
 @use 'components';
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap');
+
 
 
 body{
     display: block;
+    font-family: 'Oleo Script', cursive;
+    background-color: #0E2B55;
     overflow: visible;
 }
