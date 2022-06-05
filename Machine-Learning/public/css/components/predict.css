@@ -41,6 +41,13 @@ main.symptoms__container {
   font-size: 2rem;
 }
 
+.input__btn {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+}
+
 @media screen and (min-width: 775px) {
   .symptoms {
     width: 40%;

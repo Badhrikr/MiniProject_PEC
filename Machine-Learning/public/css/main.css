@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Ranchers&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ranchers&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap");
 /* Box sizing rules */
 *,
@@ -75,6 +75,10 @@ select {
     scroll-behavior: auto !important;
   }
 }
+p, button, div, h1, h2 {
+  font-family: "Oleo Script", cursive;
+}
+
 main {
   font-family: "Heebo", sans-serif;
 }
@@ -509,6 +513,13 @@ main.symptoms__container {
   width: 100%;
   margin-bottom: 2em;
   font-size: 2rem;
+}
+
+.input__btn {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
 }
 
 @media screen and (min-width: 775px) {

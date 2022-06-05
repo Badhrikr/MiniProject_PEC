@@ -33,39 +33,43 @@
             <form action="" method="get">
                 <div class="symptoms__option">
                     <label for="symptom1">Symptom - 1</label>
-                    <select name="Symptom - 1: " id="symptom1" required>
+                    <select name="Symptom - 1: " id="symptom1" required onchange="getSelectedValue()">
                         <option disabled selected value></option>
-                        <option value="Symptom - 1">lorem</option>
-                        <option value="Symptom - 1">lorem</option>
-                        <option value="Symptom - 1">lorem</option>
-                        <option value="Symptom - 1">lorem</option>
+                        <option value="option 1">option 1</option>
+                        <option value="option 2">option 2</option>
+                        <option value="option 3">option 3</option>
+                        <option value="option 4">option 4</option>
                     </select>
                 </div>
                 <div class="symptoms__option">
                     <label for="symptom2">Symptom - 2</label>
-                    <select name="Symptom - 2: " id="symptom2" required>
+                    <select name="Symptom - 2: " id="symptom2" required onchange="getSelectedValue()">
                         <option disabled selected value></option>
-                        <option value="Symptom - 2">lorem</option>
-                        <option value="Symptom - 2">lorem</option>
-                        <option value="Symptom - 2">lorem</option>
-                        <option value="Symptom - 2">lorem</option>
+                        <option value="option A">option A</option>
+                        <option value="option B">option B</option>
+                        <option value="option C">option C</option>
+                        <option value="option D">option D</option>
                     </select>
                 </div>
                 <div class="symptoms__option">
                     <label for="symptom3">Symptom - 3</label>
-                    <select name="Symptom - 3: " id="symptom3" required>
+                    <select name="Symptom - 3: " id="symptom3" required onchange="getSelectedValue()">
                         <option disabled selected value></option>
-                        <option value="Symptom - 3">lorem</option>
-                        <option value="Symptom - 3">lorem</option>
-                        <option value="Symptom - 3">lorem</option>
-                        <option value="Symptom - 3">lorem</option>
+                        <option value="option X">option X</option>
+                        <option value="option Y">option Y</option>
+                        <option value="option Z">option Z</option>
+                        <option value="option Z">option Z</option>
                     </select>
                 </div>
-                <button type="submit">Submit</button>
+                <div class="input__btn">
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                </div>
             </form>
         </section>
     </main>
 
     <script src="./js/navbar.js"></script>
+    <script src="./js/predict.js"></script>
   </body>
 </html>
