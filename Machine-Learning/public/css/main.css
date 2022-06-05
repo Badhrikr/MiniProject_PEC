@@ -528,6 +528,21 @@ main.symptoms__container {
     min-width: 600px;
   }
 }
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container h1 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container .info__button {
+  font-size: 1.5rem;
+}
+
 body {
   display: block;
   margin-bottom: 5em;

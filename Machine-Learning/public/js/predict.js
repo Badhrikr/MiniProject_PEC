@@ -1,3 +1,4 @@
+let Result = document.getElementsByClassName("result__reveal")
 
 function getSelectedValue(){
     let symptomOne = document.getElementById("symptom1").value
