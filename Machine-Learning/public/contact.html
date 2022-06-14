@@ -14,7 +14,6 @@
     <header>
         <div class="title">
           <h1 class="title__head">Multi Disease Predict By ML</h1>
-          <!-- <i class="fas fa-2x fa-bars" id="menuBtn" onclick="changeIcon"></i> -->
           <svg class="menuBtn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
         </div>
         
@@ -31,39 +30,30 @@
 
     <main class="symptoms__container">
         <section class="symptoms">
-            <form action="result.html" method="get">
+            <form action="" method="get">
                 <div class="symptoms__option">
-                    <label for="symptom1">Symptom - 1</label>
-                    <select name="Symptom - 1: " id="symptom1" required onchange="getSelectedValue()">
-                        <option disabled selected value></option>
-                        <option value="option 1">option 1</option>
-                        <option value="option 2">option 2</option>
-                        <option value="option 3">option 3</option>
-                        <option value="option 4">option 4</option>
-                    </select>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="NAME: " required>
                 </div>
                 <div class="symptoms__option">
-                    <label for="symptom2">Symptom - 2</label>
-                    <select name="Symptom - 2: " id="symptom2" required onchange="getSelectedValue()">
-                        <option disabled selected value></option>
-                        <option value="option A">option A</option>
-                        <option value="option B">option B</option>
-                        <option value="option C">option C</option>
-                        <option value="option D">option D</option>
-                    </select>
+                    <label for="phone">Phone No:</label>
+                    <input type="tel" id="phone" name="Phone No: " max="10" min="10" required>
                 </div>
                 <div class="symptoms__option">
-                    <label for="symptom3">Symptom - 3</label>
-                    <select name="Symptom - 3: " id="symptom3" required onchange="getSelectedValue()">
-                        <option disabled selected value></option>
-                        <option value="option X">option X</option>
-                        <option value="option Y">option Y</option>
-                        <option value="option Z">option Z</option>
-                        <option value="option Z">option Z</option>
-                    </select>
+                    <label for="email">Email ID:</label>
+                    <input type="email" id="email" name="Email ID: " required>
+                </div>
+
+                <div class="symptoms__option">
+                    <label for="date">Date:</label>
+                    <input type="date" name="Date" id="date" required>
+                </div>
+                <div class="symptoms__option">
+                    <label for="address">Address:</label>
+                    <textarea name="ADDRESS" id="address" cols="15" rows="3" required></textarea>
                 </div>
                 <div class="input__btn">
-                    <button type="submit">Submit</button>
+                    <button >Submit</button>
                     <button type="reset">Reset</button>
                 </div>
             </form>

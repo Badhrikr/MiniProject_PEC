@@ -287,7 +287,7 @@ nav {
 }
 
 .show-links {
-  height: 10rem;
+  height: 12rem;
 }
 
 nav ul {
@@ -470,6 +470,15 @@ p {
 }
 .card__holder:hover > .card__description.slide-down {
   transform: translateY(0);
+}
+
+input {
+  width: 40%;
+  margin: 0;
+}
+
+label {
+  margin: 0;
 }
 
 main.symptoms__container {
