@@ -10,14 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/all.min.css">
     <link rel="stylesheet" href="./css/main.css">
-
-    <script>
-        let subBtn = document.getElementsByClassName("con__sub")
-
-        function modal(){
-            alert("Your appointment is booked")
-        }
-    </script>
 </head>
 <body>
     <header>
@@ -62,10 +54,16 @@
                     <textarea name="ADDRESS" id="address" cols="15" rows="3" required></textarea>
                 </div>
                 <div class="input__btn">
-                    <button class="con__sub" onclick="modal()">Submit</button>
+                    <button type="submit"class="button open-button">Submit</button>
                     <button type="reset">Reset</button>
                 </div>
             </form>
+            <dialog class="modal" id="modal">
+                <h2>Your appointment is booked</h2>
+                <p>Thanks For Contacting Us</p>
+                <button class="button close-button">close modal</button>
+              
+            </dialog>
         </section>
         <!-- <section class="result__box">
             <div class="result__container">
@@ -77,5 +75,6 @@
 
     <script src="./js/navbar.js"></script>
     <script src="./js/predict.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
