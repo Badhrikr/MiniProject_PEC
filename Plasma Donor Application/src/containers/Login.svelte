@@ -13,7 +13,7 @@
 </script>
 
 <form action="|" class="container relative modal-box" on:submit|preventDefault>
-  <h1 class="mt-16 mb-4 mr-auto text-3xl uppercase md:mt-0 md:mb-8">Login</h1>
+  <h1 class="mb-4 mr-auto text-3xl uppercase md:mb-8">Login</h1>
   <label for="login-modal" class="absolute btn btn-sm btn-circle right-2 top-2"
     >✕
   </label>

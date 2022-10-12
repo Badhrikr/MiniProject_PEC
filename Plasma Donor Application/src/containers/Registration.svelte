@@ -60,7 +60,7 @@
 </script>
 
 <form action="|" class="container relative modal-box" on:submit|preventDefault>
-  <h1 class="mr-auto mb-4 mt-16 md:mt-0 md:mb-8 text-3xl uppercase">
+  <h1 class="mb-4 mr-auto mt-16 text-3xl uppercase md:mt-0 md:mb-8">
     Register
   </h1>
   <label
@@ -199,7 +199,6 @@
     font-size: 1.25rem;
     border-radius: 1rem;
     border: 2px solid var(--clr-primary-400);
-    overflow: hidden;
   }
 
   .buttons {
