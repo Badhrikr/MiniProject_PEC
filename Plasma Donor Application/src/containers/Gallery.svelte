@@ -44,7 +44,8 @@
 
   @media (min-width: 50em) {
     .gallery__images {
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
       gap: 2em;
     }
 
