@@ -90,7 +90,7 @@
     placeholder="example@123.com"
     inputIcon="fa-solid fa-envelope"
     valid={validUserEmail}
-    validityMessage="Please Fill in Your appr Email ID"
+    validityMessage="Please Fill in Your Email ID"
     value={userEmail}
     on:input={(event) => {
       userEmail = event.target.value
@@ -124,7 +124,7 @@
     }}
   />
   <TextInput
-    type="text"
+    type="number"
     label="Mobile:"
     id="mobile no"
     name="mobile"

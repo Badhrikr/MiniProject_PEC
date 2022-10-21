@@ -16,7 +16,12 @@
 
 <div class=" container ">
   <label for={id}>{label}</label>
-  <div class="wrapper" class:invalid={!valid && touched} class:valid>
+  <div
+    class="wrapper"
+    class:inverted={contentType === 'radioType'}
+    class:invalid={!valid && touched}
+    class:valid
+  >
     {#if contentType === 'radioType'}
       <label for="male">Male</label>
       <input
@@ -134,6 +139,11 @@
     color: red;
     margin: 0.25em 0;
     font-size: 1rem;
+  }
+
+  .inverted {
+    background-color: transparent;
+    border: none;
   }
 
   @media (min-width: 50em) {

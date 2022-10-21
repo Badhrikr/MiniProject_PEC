@@ -40,7 +40,7 @@
     overflow: hidden;
   }
 
-  @media (min-width: 30em) {
+  @media (min-width: 50em) {
     .card {
       flex-direction: row;
     }
