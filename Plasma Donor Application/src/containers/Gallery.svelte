@@ -42,6 +42,10 @@
     object-position: center;
   }
 
+  .gallery__image:last-child {
+    margin-bottom: 0;
+  }
+
   @media (min-width: 50em) {
     .gallery__images {
       display: grid;

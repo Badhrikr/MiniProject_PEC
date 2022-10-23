@@ -63,5 +63,9 @@
       display: flex;
       flex-direction: column;
     }
+
+    :where(.stats) > :not([hidden]) ~ :not([hidden]) {
+      border: none;
+    }
   }
 </style>
