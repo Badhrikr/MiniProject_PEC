@@ -175,7 +175,7 @@
     placeholder="Password@123"
     inputIcon="fa-solid fa-lock"
     valid={validUserConfirmPassword}
-    validityMessage="No match in confirm password"
+    validityMessage="Password do not match"
     value={userConfirmPassword}
     on:input={(event) => {
       userConfirmPassword = event.target.value
@@ -217,5 +217,19 @@
     border-radius: 100vmax;
     text-transform: uppercase;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  @media (max-width: 50em) {
+    .modal-box {
+      max-height: none;
+      padding: 1em;
+    }
+
+    .modal-box h1 {
+      margin: 0 auto 0.5em 0;
+    }
+    .buttons {
+      width: 100%;
+    }
   }
 </style>
