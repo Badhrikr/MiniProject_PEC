@@ -19,7 +19,7 @@
         </svg>
       </a>
 
-      <a href="/">
+      <a href="https://www.youtube.com/watch?v=08Pb-UZPLiU" target="_blank">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"

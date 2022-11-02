@@ -221,8 +221,9 @@
 
   @media (max-width: 50em) {
     .modal-box {
-      max-height: none;
+      max-height: max-content;
       padding: 1em;
+      top: 2em;
     }
 
     .modal-box h1 {
