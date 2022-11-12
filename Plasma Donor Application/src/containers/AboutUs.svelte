@@ -6,10 +6,12 @@
   <div class="card__description">
     <h1 class="card__title">About Us</h1>
     <div class="card__content">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident numquam
-      repellendus repudiandae beatae ratione recusandae est odio inventore magni
-      harum alias nemo esse explicabo architecto libero, omnis voluptate itaque
-      atque.
+      We, Safe Life Blood Banks at Chennai, Tamil Nadu, aim to provide prompt,
+      economical and reliable services of the safest blood and other blood
+      products like plasma, RBCs, platelets, etc. Offering the industry-leading,
+      advanced technology and well-equipped inventory, we make all types of
+      blood available for the patients and many hospitals. We contribute in
+      saving many lives in the time of need or in an emergency.
     </div>
   </div>
   <div class="card__images">
