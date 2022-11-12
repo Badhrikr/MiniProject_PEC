@@ -21,9 +21,9 @@
 
 <style>
   .card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
     gap: 1.5em;
     width: 90%;
     max-width: 1200px;
@@ -44,7 +44,7 @@
 
   @media (min-width: 50em) {
     .card {
-      flex-direction: row;
+      grid-template-columns: 2fr 1fr;
     }
 
     .card__content {
