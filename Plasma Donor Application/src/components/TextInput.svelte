@@ -8,7 +8,7 @@
   export let label
   export let placeholder = null
   export let inputIcon
-  export let valid = true
+  export let valid = 'initial'
   export let validityMessage = ''
 
   let touched = false
@@ -19,8 +19,8 @@
   <div
     class="wrapper"
     class:inverted={contentType === 'radioType'}
-    class:invalid={!valid && touched}
-    class:valid
+    class:invalid={valid === 'invalid' && touched}
+    class:valid={valid === 'valid'}
   >
     {#if contentType === 'radioType'}
       <label for="male">Male</label>
@@ -73,7 +73,7 @@
     <i class={inputIcon} />
   </div>
 
-  {#if validityMessage && !valid && touched}
+  {#if validityMessage && valid === 'invalid' && touched}
     <p class="error-message">{validityMessage}</p>
   {/if}
 </div>

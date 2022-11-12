@@ -15,47 +15,71 @@
   let userPassword = ''
   let userConfirmPassword = ''
 
-  $: validUserName = !isEmpty(userName)
+  let validUserName = 'initial'
+  let validUserEmail = 'initial'
+  let validUserDob = 'initial'
+  let validPhoneNumber = 'initial'
+  let validUserAge = 'initial'
+  let validUserPassword = 'initial'
+  let validUserConfirmPassword = 'initial'
+
+  $: validUserName = isEmpty(userName)
+  $: validUserDob = isEmpty(userDob)
+  $: validPhoneNumber = isEmpty(phoneNumber)
   $: validUserEmail = isValidEmail(userEmail)
-  $: validUserDob = !isEmpty(userDob)
-  $: validPhoneNumber = !isEmpty(phoneNumber)
   $: validUserAge = isValidAge(userAge)
   $: validUserPassword = isValidPassword(userPassword)
   $: validUserConfirmPassword = isValidConfirmPassword(userConfirmPassword)
 
   function isEmpty(val) {
-    return val.trim().length === 0
+    if (val.trim().length === 0) {
+      return 'invalid'
+    } else {
+      return 'valid'
+    }
   }
 
   function isValidEmail(val) {
-    return new RegExp(
+    let state = new RegExp(
       "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
     ).test(val)
-  }
 
-  function isValidPassword(val) {
-    return new RegExp(
-      '^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})'
-    ).test(val)
-  }
-
-  function isValidConfirmPassword(val) {
-    if (val === userPassword) {
-      return true
+    if (state) {
+      return 'valid'
     } else {
-      return false
+      return 'invalid'
     }
   }
 
   function isValidAge(val) {
     if (val < 18) {
       // validUserAge = "Age is below 18,Not Eligible"
-      return false
+      return 'invalid'
     } else if (val > 50) {
       // validUserAge = "Age is above 50,Not Eligible"
-      return false
+      return 'invalid'
     }
-    return true
+    return 'valid'
+  }
+
+  function isValidPassword(val) {
+    let state = new RegExp(
+      '^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})'
+    ).test(val)
+
+    if (state) {
+      return 'valid'
+    } else {
+      return 'invalid'
+    }
+  }
+
+  function isValidConfirmPassword(val) {
+    if (val === userPassword) {
+      return 'valid'
+    } else {
+      return 'invalid'
+    }
   }
 </script>
 
@@ -183,7 +207,19 @@
   />
   <div class="buttons">
     <button type="submit">Submit</button>
-    <button type="reset">Reset</button>
+    <button
+      type="reset"
+      on:click={() => {
+        validUserName =
+          validUserEmail =
+          validUserDob =
+          validPhoneNumber =
+          validUserAge =
+          validUserPassword =
+          validUserConfirmPassword =
+            'initial'
+      }}>Reset</button
+    >
   </div>
 </form>
 
@@ -211,12 +247,19 @@
   .buttons * {
     padding: 0.3em 1.2em;
     color: var(--clr-primary);
+    background-color: var(--clr-primary-400);
     font-size: 1.175rem;
     font-weight: 600;
-    background-color: var(--clr-primary-400);
-    border-radius: 100vmax;
     text-transform: uppercase;
+    border-radius: 100vmax;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    transition: all 450ms ease-in-out;
+  }
+
+  .buttons *:hover {
+    outline: 2px solid var(--clr-primary-400);
+    background-color: var(--clr-primary);
+    color: var(--clr-primary-400);
   }
 
   @media (max-width: 50em) {
