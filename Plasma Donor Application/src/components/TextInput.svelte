@@ -43,7 +43,7 @@
         on:change
         on:blur={() => (touched = true)}
       />
-    {:else if contentType === 'ageType'}
+    {:else if contentType === 'numberType'}
       <input
         {type}
         {id}
@@ -53,6 +53,31 @@
         min="18"
         max="50"
         maxlength="2"
+        required
+        on:input
+        on:blur={() => (touched = true)}
+      />
+    {:else if contentType === 'selectType'}
+      <select {name} required>
+        <option value="" selected disabled hidden>Blood group</option>
+        <option value="O+">O+</option>
+        <option value="A+">A+</option>
+        <option value="B+">B+</option>
+        <option value="AB+">AB+</option>
+        <option value="O-">O-</option>
+        <option value="A-">A-</option>
+        <option value="B-">B-</option>
+        <option value="AB-">AB-</option>
+      </select>
+    {:else if contentType === 'descriptiveType'}
+      <textarea
+        {name}
+        {id}
+        {value}
+        {placeholder}
+        {maxlength}
+        cols="30"
+        rows="3"
         required
         on:input
         on:blur={() => (touched = true)}
@@ -85,6 +110,7 @@
     justify-content: center;
     align-items: flex-start;
     margin-bottom: 1em;
+    font-size: 1.125rem;
   }
 
   .container:last-child {
@@ -121,6 +147,23 @@
   input[type='date']::-webkit-calendar-picker-indicator {
     display: none;
     -webkit-appearance: none;
+  }
+
+  textarea {
+    width: 100%;
+    background-color: transparent;
+    outline: none;
+  }
+
+  select {
+    width: 100%;
+    background-color: transparent;
+  }
+
+  option {
+    background-color: #fff;
+    padding: 0;
+    margin: 0;
   }
 
   /* style for validation */

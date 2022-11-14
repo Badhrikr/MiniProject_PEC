@@ -12,6 +12,7 @@
   let userGender
   let phoneNumber = ''
   let userAge = ''
+  let userAddress = ''
   let userPassword = ''
   let userConfirmPassword = ''
 
@@ -20,12 +21,14 @@
   let validUserDob = 'initial'
   let validPhoneNumber = 'initial'
   let validUserAge = 'initial'
+  let validUserAddress = 'initial'
   let validUserPassword = 'initial'
   let validUserConfirmPassword = 'initial'
 
   $: validUserName = isEmpty(userName)
   $: validUserDob = isEmpty(userDob)
   $: validPhoneNumber = isEmpty(phoneNumber)
+  $: validUserAddress = isEmpty(userAddress)
   $: validUserEmail = isValidEmail(userEmail)
   $: validUserAge = isValidAge(userAge)
   $: validUserPassword = isValidPassword(userPassword)
@@ -92,6 +95,8 @@
     class="absolute btn btn-sm btn-circle right-2 top-2"
     >✕
   </label>
+
+  <!-- Username -->
   <TextInput
     type="text"
     label="Name:"
@@ -106,6 +111,8 @@
       userName = event.target.value
     }}
   />
+
+  <!-- Email ID -->
   <TextInput
     type="email"
     label="Email ID:"
@@ -120,6 +127,8 @@
       userEmail = event.target.value
     }}
   />
+
+  <!-- Date of Birth -->
   <TextInput
     type="date"
     label="DOB:"
@@ -133,6 +142,8 @@
       userDob = event.target.value
     }}
   />
+
+  <!-- Gender -->
   <TextInput
     contentType="radioType"
     type="radio"
@@ -147,6 +158,8 @@
       userGender = event.target.value
     }}
   />
+
+  <!-- Mobile number -->
   <TextInput
     type="number"
     label="Mobile:"
@@ -162,8 +175,10 @@
       phoneNumber = event.target.value
     }}
   />
+
+  <!-- Age -->
   <TextInput
-    contentType="ageType"
+    contentType="numberType"
     type="number"
     label="Age:"
     id="age"
@@ -177,6 +192,33 @@
       userAge = event.target.value
     }}
   />
+
+  <!-- Blood Group -->
+  <TextInput
+    contentType="selectType"
+    name="blood-group"
+    label="Blood Group:"
+    inputIcon="null"
+    validityMessage="Please Select a blood group"
+  />
+
+  <!-- Address -->
+  <TextInput
+    contentType="descriptiveType"
+    name="address"
+    label="Address:"
+    id="Address:"
+    placeholder="Address"
+    inputIcon="null"
+    valid={validUserAddress}
+    validityMessage="Please mention your address"
+    value={userAddress}
+    on:input={(event) => {
+      userAddress = event.target.value
+    }}
+  />
+
+  <!-- Password -->
   <TextInput
     type="password"
     label="Create Password:"
@@ -205,6 +247,7 @@
       userConfirmPassword = event.target.value
     }}
   />
+
   <div class="buttons">
     <button type="submit">Submit</button>
     <button
@@ -253,13 +296,6 @@
     text-transform: uppercase;
     border-radius: 100vmax;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-    transition: all 450ms ease-in-out;
-  }
-
-  .buttons *:hover {
-    outline: 2px solid var(--clr-primary-400);
-    background-color: var(--clr-primary);
-    color: var(--clr-primary-400);
   }
 
   @media (max-width: 50em) {

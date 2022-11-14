@@ -4,11 +4,15 @@
   let userName = ''
   let userPassword = ''
 
-  $: validUserName = !isEmpty(userName)
-  $: validUserPassword = !isEmpty(userPassword)
+  $: validUserName = isEmpty(userName)
+  $: validUserPassword = isEmpty(userPassword)
 
   function isEmpty(val) {
-    return val.trim().length === 0
+    if (val.trim().length === 0) {
+      return 'invalid'
+    } else {
+      return 'valid'
+    }
   }
 </script>
 
