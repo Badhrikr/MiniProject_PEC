@@ -18,7 +18,7 @@
       <!-- <div class="stat-desc">↘︎ 90 (14%)</div> -->
     </div>
   </div>
-  <div class="button flex justify-between items-center gap-8">
+  <!-- <div class="button flex justify-between items-center gap-8">
     <label
       for="login-modal"
       class="btn btn-outline btn-warning  cursor-pointer modal-button login-btn"
@@ -29,6 +29,20 @@
       class="btn btn-outline btn-warning  cursor-pointer modal-button login-btn"
       >Register
     </label>
+  </div> -->
+  <div class="button flex justify-between items-center gap-8">
+    <a
+      href="https://badhrikr.github.io/MiniProject_PEC/Login/index.html"
+      for="login-modal"
+      class="btn btn-outline mr-4 cursor-pointer modal-button login-btn"
+      target="_blank">Login</a
+    >
+    <a
+      href="https://badhrikr.github.io/MiniProject_PEC/Registration/index.html"
+      for="register-modal"
+      class="btn btn-outline mr-4 cursor-pointer modal-button login-btn"
+      target="_blank">Register</a
+    >
   </div>
 </div>
 
