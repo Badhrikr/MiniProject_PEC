@@ -1,0 +1,13 @@
+.form-control {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-control * {
+  width: 100%;
+}
+
+.gender-field {
+  display: grid;
+  grid-auto-flow: column;
+}
