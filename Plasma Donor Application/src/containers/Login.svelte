@@ -48,6 +48,11 @@
       userPassword = event.target.value
     }}
   />
+  <p>
+    Don't have an account? <label for="register-modal" class="register-modal"
+      >Register Here</label
+    >
+  </p>
   <button type="submit">Submit</button>
 </form>
 
@@ -75,5 +80,14 @@
     border-radius: 100vmax;
     text-transform: uppercase;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  p {
+    margin-bottom: 1em;
+  }
+
+  .register-modal {
+    color: blue;
+    border-bottom: 1px solid blue;
   }
 </style>
