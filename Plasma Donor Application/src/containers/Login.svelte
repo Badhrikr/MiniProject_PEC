@@ -89,5 +89,6 @@
   .register-modal {
     color: blue;
     border-bottom: 1px solid blue;
+    cursor: pointer;
   }
 </style>
