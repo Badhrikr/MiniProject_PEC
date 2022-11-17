@@ -3,9 +3,11 @@
   export let type
   export let value
   export let name
-  export let maxlength = 30
+  export let maxlength = null
   export let id
   export let label
+  export let min = null
+  export let max = null
   export let placeholder = null
   export let inputIcon
   export let valid = 'initial'
@@ -43,20 +45,6 @@
         on:change
         on:blur={() => (touched = true)}
       />
-    {:else if contentType === 'numberType'}
-      <input
-        {type}
-        {id}
-        {value}
-        {placeholder}
-        {name}
-        min="18"
-        max="50"
-        maxlength="2"
-        required
-        on:input
-        on:blur={() => (touched = true)}
-      />
     {:else if contentType === 'selectType'}
       <select {name} required>
         <option value="" selected disabled hidden>Blood group</option>
@@ -90,6 +78,8 @@
         {placeholder}
         {name}
         {maxlength}
+        {max}
+        {min}
         required
         on:input
         on:blur={() => (touched = true)}

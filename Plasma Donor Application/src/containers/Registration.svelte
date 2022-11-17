@@ -19,6 +19,7 @@
   let validUserName = 'initial'
   let validUserEmail = 'initial'
   let validUserDob = 'initial'
+  let validUserGender = 'initial'
   let validPhoneNumber = 'initial'
   let validUserAge = 'initial'
   let validUserAddress = 'initial'
@@ -27,6 +28,7 @@
 
   $: validUserName = isEmpty(userName)
   $: validUserDob = isEmpty(userDob)
+  $: validUserGender = isEmpty(userDob)
   $: validPhoneNumber = isEmpty(phoneNumber)
   $: validUserAddress = isEmpty(userAddress)
   $: validUserEmail = isValidEmail(userEmail)
@@ -134,6 +136,8 @@
     label="DOB:"
     id="dateOfBirth"
     name="dob"
+    min="1968-01-01"
+    max="2004-12-31"
     inputIcon="fa-solid fa-calendar-days"
     valid={validUserDob}
     validityMessage="DOB is required"
@@ -165,7 +169,6 @@
     label="Mobile:"
     id="mobile no"
     name="mobile"
-    maxlength="10"
     placeholder="Phone number"
     inputIcon="fa-solid fa-phone"
     valid={validPhoneNumber}
@@ -178,13 +181,14 @@
 
   <!-- Age -->
   <TextInput
-    contentType="numberType"
     type="number"
     label="Age:"
     id="age"
     name="age"
     placeholder="Age 18 - 50"
     inputIcon="null"
+    min="18"
+    max="60"
     valid={validUserAge}
     validityMessage="Please Fill in Your Age"
     value={userAge}
