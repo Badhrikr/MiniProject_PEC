@@ -61,7 +61,7 @@
       Plasma Bank</a
     >
   </div>
-  <!-- <div class="navbar-end">
+  <div class="navbar-end">
     <label
       for="login-modal"
       class="btn btn-outline mr-4 cursor-pointer modal-button login-btn"
@@ -72,8 +72,8 @@
       class="btn btn-outline mr-4 cursor-pointer modal-button login-btn"
       >Register</label
     >
-  </div> -->
-  <div class="navbar-end">
+  </div>
+  <!-- <div class="navbar-end">
     <a
       href="https://badhrikr.github.io/MiniProject_PEC/Login/index.html"
       for="login-modal"
@@ -86,7 +86,7 @@
       class="btn btn-outline mr-4 cursor-pointer modal-button login-btn"
       target="_blank">Register</a
     >
-  </div>
+  </div> -->
 </section>
 
 <style>

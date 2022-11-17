@@ -7,8 +7,8 @@
 </script>
 
 <Navbar />
-<!-- <Modal>
+<Modal>
   <Login slot="login" />
   <Registration />
-</Modal> -->
+</Modal>
 <ImageCarousel />
