@@ -49,7 +49,7 @@
     }}
   />
   <p>
-    Don't have an account? <label for="register-modal" class="register-modal"
+    Don't have an account? <label for="accessform-modal" class="register-modal"
       >Register Here</label
     >
   </p>
